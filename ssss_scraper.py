@@ -11,11 +11,11 @@ comicImageBlock = soup.find("div",{"id":"wrapper2"})
  
 comicImageTag = comicImageBlock.find("img")
  
-comicURL = "https://sssscomic.com/" + comicImageTag['src']
+comicURL = "http://sssscomic.com/" + comicImageTag['src']
  
 print comicURL
- 
-urllib.urlretrieve(comicURL, "C:/Users/alant/Downloads/ssss.jpg")
+image = urllib.URLopener() 
+image.retrieve(comicURL, "C:/Users/varou_000/Downloads/ssss.jpg")
 
 # scrape historical comics
 def scrapeold(start, end):
